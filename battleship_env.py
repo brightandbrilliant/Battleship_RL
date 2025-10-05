@@ -174,14 +174,17 @@ class CustomBattleshipEnv(gym.Env):
     # def close(self):
     #     pass
 
-# --- 简单测试环境 ---
-# env = CustomBattleshipEnv()
-# obs = env.reset()
-# print("初始观测网格:\n", obs)
-#
+
+env = CustomBattleshipEnv()
+obs = env.reset()
+print("初始观测网格:\n", obs)
 # # 尝试发射几炮 (例如，炸开 (0, 0) 和 (9, 9))
-# obs, reward, done, info = env.step(action=0 * env.N + 0) # 0, 0
-# print(f"\n动作: (0, 0), 奖励: {reward}, Done: {done}")
-# obs, reward, done, info = env.step(action=9 * env.N + 9) # 9, 9
-# print(f"动作: (9, 9), 奖励: {reward}, Done: {done}")
-# print("当前观测网格:\n", obs)
+obs, reward, done, info = env.step(action=0 * env.N + 0) # 0, 0
+print(f"\n动作: (0, 0), 奖励: {reward}, Done: {done}")
+obs, reward, done, info = env.step(action=9 * env.N + 9) # 9, 9
+print(f"动作: (9, 9), 奖励: {reward}, Done: {done}")
+obs, reward, done, info = env.step(action=7 * env.N + 2) # 7, 2
+print(f"动作: (7, 2), 奖励: {reward}, Done: {done}")
+obs, reward, done, info = env.step(action=8 * env.N + 5) # 8, 5
+print(f"动作: (8, 5), 奖励: {reward}, Done: {done}")
+print("当前观测网格:\n", obs)
