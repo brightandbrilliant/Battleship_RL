@@ -131,7 +131,7 @@ class CustomBattleshipEnv(gym.Env):
         if self.obs_grid[row, col] != 0:
             # 这一格已经被炸过 (obs_grid 值不是 0)
             # 强化学习的目标是学习避免这种浪费，给予一个巨大的负面奖励
-            reward -= 100
+            reward -= 1000
             return self.obs_grid, reward, done, info
 
         # --- 2. 检查是否命中潜水艇 ---

@@ -93,7 +93,7 @@ def train_dqn():
         reward_history.append(total_reward)
 
         # --- 打印进度和评估 ---
-        if episode % 100 == 0 and episode > 0:
+        if episode % 50 == 0 and episode > 0:
             avg_reward = np.mean(reward_history[-100:])
             # 步数是主要的性能指标（我们想让步数尽可能接近潜水艇总数）
             print(f"回合 {episode:>5}: "
