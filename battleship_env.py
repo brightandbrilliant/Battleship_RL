@@ -11,7 +11,7 @@ class CustomBattleshipEnv(gym.Env):
 
     metadata = {'render.modes': ['human', 'ansi']}
 
-    def __init__(self, N=10, ship_lengths=[5, 4, 3, 3, 2]):
+    def __init__(self, N=10, ship_lengths=[3, 2, 2]):
         """
         初始化环境参数。
 
@@ -174,7 +174,7 @@ class CustomBattleshipEnv(gym.Env):
     # def close(self):
     #     pass
 
-
+"""
 env = CustomBattleshipEnv()
 obs = env.reset()
 print("初始观测网格:\n", obs)
@@ -188,3 +188,4 @@ print(f"动作: (7, 2), 奖励: {reward}, Done: {done}")
 obs, reward, done, info = env.step(action=8 * env.N + 5) # 8, 5
 print(f"动作: (8, 5), 奖励: {reward}, Done: {done}")
 print("当前观测网格:\n", obs)
+"""
